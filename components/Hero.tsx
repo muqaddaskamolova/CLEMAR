@@ -3,6 +3,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 import Image from 'next/image';
@@ -14,8 +15,10 @@ const Hero: React.FC = () => {
   return (
     <div className="relative w-full mt-8 rounded-lg overflow-hidden">
       <Swiper
+       modules={[FreeMode, Pagination, Navigation]}
         pagination={{ clickable: true }}
-        modules={[FreeMode, Pagination]}
+       navigation={true}
+        loop={true}
         className="relative h-56 md:h-96"
         spaceBetween={10}
         slidesPerView={1}
