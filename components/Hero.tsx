@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative w-full mt-8 rounded-lg overflow-hidden">
       <Swiper
-       modules={[FreeMode, Pagination, Navigation]}
+       modules={[FreeMode, Pagination]}
         pagination={{ clickable: true }}
        navigation={true}
         loop={true}
