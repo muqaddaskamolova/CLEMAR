@@ -1,42 +1,48 @@
 "use client";
+// components/WhyWorkWithUs.tsx
 import React from 'react';
 
-const advantagesData = [
-    {
-        id: 1,
-        imgSrc: 'https://clean.maxone.uz/files/1talash.png',
-        title: 'Service products',
-    },
-    {
-        id: 2,
-        imgSrc: 'https://clean.maxone.uz/files/2tanlash.png',
-        title: 'Spare parts of goods',
-    },
-    {
-        id: 3,
-        imgSrc: 'https://clean.maxone.uz/files/3tanlash.png',
-        title: 'Rental of goods',
-    },
-    {
-        id: 4,
-        imgSrc: 'https://clean.maxone.uz/files/4tanlash.png',
-        title: 'Cleaner accessories',
-    },
-];
-
 const Advantages: React.FC = () => {
+    const features = [
+        {
+            imgSrc: "/assets/images/OfficialDealer.svg", // Corrected path
+            alt: "Official Dealer",
+            title: "Official Dealer",
+            description: "We work without intermediaries, offering the best prices."
+        },
+        {
+            imgSrc: "/assets/images/FreeDemo.svg", // Corrected path
+            alt: "Free Demonstration",
+            title: "Free Demonstration",
+            description: "We bring the equipment to you for a 'test drive'."
+        },
+        {
+            imgSrc: "/assets/images/Servicepng.svg", // Corrected path (check file extension)
+            alt: "Service",
+            title: "Service",
+            description: "Our service is available 24/7 across the country."
+        },
+        {
+            imgSrc: "/assets/images/Training.svg", // Corrected path
+            alt: "Training",
+            title: "Training",
+            description: "We provide training to ensure long-lasting equipment usage."
+        }
+    ];
+
     return (
-        <div className="Advantages parent py-8">
-            <div className="wrapper mx-auto px-4">
-                <h1 className="sub-title text-2xl font-bold text-center">Why choose us?</h1>
-                <div className="cards border border-sky-400 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-4">
-                    {advantagesData.map((advantage) => (
-                        <div key={advantage.id} className="card flex flex-col items-center p-4 bg-white rounded-lg shadow-md transition-transform duration-200 hover:scale-105">
-                            <img src={advantage.imgSrc} alt={advantage.title} className="w-24 h-24 object-contain" />
-                            <h1 className="text-lg font-semibold text-center mt-2">{advantage.title}</h1>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-left mb-12 text-[#7024bc]">Why Work With Us</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                    <div key={index} className="flex flex-col items-center bg-[#f7f7f7] rounded-lg p-6 text-center border border-[#7024bc]">
+                        <div className="flex justify-center w-full mb-4">
+                            <img src={feature.imgSrc} alt={feature.alt} className="w-16 h-16 mb-4" style={{ filter: 'invert(25%) sepia(91%) saturate(478%) hue-rotate(176deg) brightness(96%) contrast(92%)' }} />
                         </div>
-                    ))}
-                </div>
+                        <h3 className="text-lg font-bold mb-2 text-center text-[#7024bc]">{feature.title}</h3>
+                        <p className="text-gray-600 text-sm text-center">{feature.description}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );

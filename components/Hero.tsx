@@ -5,26 +5,31 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay module
 import Image from 'next/image';
-import CarouselIMG1 from '../public/assets/images/carousel1.png';
-import CarouselIMG2 from '../public/assets/images/carousel2.jpg';
-import CarouselIMG3 from '../public/assets/images/carousel3.png';
+import CarouselIMG1 from '../public/assets/images/slideclean1.jpg';
+import CarouselIMG2 from '../public/assets/images/slide4.jpg';
+import CarouselIMG3 from '../public/assets/images/slideclean2.jpg';
+import CarouselIMG4 from '../public/assets/images/slide3.jpg';
 
 const Hero: React.FC = () => {
   return (
     <div className="relative w-full mt-8 rounded-lg overflow-hidden">
       <Swiper
-       modules={[FreeMode, Pagination]}
+        modules={[FreeMode, Pagination, Autoplay]} // Add Autoplay module here
         pagination={{ clickable: true }}
-       navigation={true}
-        loop={true}
+        navigation={true}
+        loop={true} // Loop enabled
+        autoplay={{
+          delay: 3000, // Delay between transitions (in ms)
+          disableOnInteraction: false, // Autoplay continues after user interaction
+        }}
         className="relative h-56 md:h-96"
         spaceBetween={10}
         slidesPerView={1}
       >
         {/* Carousel Items */}
-        {[CarouselIMG1, CarouselIMG2, CarouselIMG3].map((img, index) => (
+        {[CarouselIMG1, CarouselIMG2, CarouselIMG3, CarouselIMG4].map((img, index) => (
           <SwiperSlide key={index}>
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
