@@ -29,7 +29,7 @@ const Advantages: React.FC = () => {
         <div className="Advantages parent py-8">
             <div className="wrapper mx-auto px-4">
                 <h1 className="sub-title text-2xl font-bold text-center">Why choose us?</h1>
-                <div className="cards grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-4">
+                <div className="cards border border-sky-400 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-4">
                     {advantagesData.map((advantage) => (
                         <div key={advantage.id} className="card flex flex-col items-center p-4 bg-white rounded-lg shadow-md transition-transform duration-200 hover:scale-105">
                             <img src={advantage.imgSrc} alt={advantage.title} className="w-24 h-24 object-contain" />
