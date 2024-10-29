@@ -47,7 +47,7 @@ const NavLinks: React.FC = () => {
             <li className="relative h-full mb-2 flex items-center">
               <button
                 onClick={toggleDropdown}
-                className="text-white hover:text-gray-700 dark:hover:text-white flex items-center h-full px-4 py-2 w-full text-left"
+                className="text-white hover:text-blue-400 dark:hover:text-white flex items-center h-full px-4 py-2 w-full text-left"
               >
                 <FontAwesomeIcon icon={faBars} className="mr-2" />
                 Catalog

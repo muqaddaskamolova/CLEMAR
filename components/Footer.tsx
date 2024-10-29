@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                         href="mailto:info@clemar.uz"
                         className="flex items-center gap-2 mt-2 text-[#7024bc] hover:underline"
                     >
-                        <AiFillMail className="h-5 w-5" /> info@clemar.uz
+                        <AiFillMail className="h-5 w-5" /> info@mycleaners.uz
                     </a>
                     <div className="flex gap-4 mt-4">
                         {[

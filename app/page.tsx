@@ -10,6 +10,7 @@ import Contact from "../components/ContactUs";
 import Partners from "../components/Partners";
 import Advantages from "../components/Advantages";
 import AboutUs from "../components/About";
+import FAQ from "../components/FAQ";
 //import Link from 'next/link';
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <Partners />
         {/* Use Link for navigation */}
         <AboutUs/>
+        <FAQ/>
         <Contact />
       </div>
       <Footer />

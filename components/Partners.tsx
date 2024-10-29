@@ -2,7 +2,7 @@
 "use client";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, FreeMode, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -43,7 +43,13 @@ const Partners: React.FC = () => {
             <div className="wrapper mx-auto px-4">
                 <h1 className="sub-title text-2xl font-bold text-white">They trusted us</h1>
                 <Swiper
-                    modules={[Navigation]}
+                 modules={[FreeMode, Pagination, Autoplay,Navigation]} // Add Autoplay module here
+                 pagination={{ clickable: true }}
+                 loop={true} // Loop enabled
+                 autoplay={{
+                 delay: 3000, // Delay between transitions (in ms)
+                 disableOnInteraction: false, // Autoplay continues after user interaction
+        }}   
                     spaceBetween={30}
                     slidesPerView={3}
                     navigation

@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CLEMAR UZ",
+  title: "MYCLEANERS UZ",
   description: "Discover the best service",
 };
 
